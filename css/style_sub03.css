@@ -1,0 +1,905 @@
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-2ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #1f3668;}
+body{font-family: 'S-CoreDream-4Regular';
+font-size: 25px;
+line-height: 30px;
+color:#1f3668;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+  }
+*/
+
+/*top*/
+#top{
+  width: 100%;
+  height: 700px;
+}
+.top_inner{
+  width:1320px;
+  margin: 0 auto;
+  z-index: 99;
+}
+.top_inner_wrap{
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100px;
+  z-index: 98;
+  position: relative;
+}
+.logo{
+  float: left;
+  padding-top: 5px;
+}
+.nav{
+  float: right;
+}
+.nav li{
+  float: left;
+  padding: 35px 30px 35px;
+}
+.nav li a{
+  font-family: 'Cafe24Ssurround';
+  color: #fff;
+}
+.nav> li:hover> a{
+  color:#9db9e1;
+}
+.main_banner{ /*100퍼...*/
+  position:absolute;
+  z-index: 1;
+  width: 100%;
+  height: 700px;
+  top:0;
+  left:0;
+  right:0;
+}
+.m_banner{
+  width:100%;
+}
+/*top*/
+
+
+/* 퀵메뉴 */
+.quickmenu {
+  position:absolute;
+  width:50px;
+  top:95%;
+  margin-top:-50px;
+  right:3%;
+  background:#1f3769;
+  border-radius: 50%;
+  z-index: 1;
+}
+.quickmenu ul {
+  position:relative;
+  float:left;
+  width:100%;
+  display:inline-block;
+  *display:inline;
+}
+.quickmenu ul li {
+  float:left;
+  width:100%;
+  border-bottom:1px solid #ddd;
+  text-align:center;
+  display:inline-block;
+  *display:inline;
+}
+.quickmenu ul li a {
+  position:relative;
+  float:left;
+  width:100%;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  color:#9db9e1;
+  font-size:15pt;
+}
+.quickmenu ul li a:hover {
+  color:#fff;
+}
+.quickmenu ul li:last-child {
+  border-bottom:0;
+}
+
+/* ?? 
+.content {position:relative;min-height:1000px;}*/
+
+/* 탭메뉴 */
+.tabmenu{
+  width:1320px;
+  height:100px;
+  padding: 100px 0 50px;
+  margin: 0 auto;
+}
+
+.list{
+  margin: 0 auto;
+  padding: 0;
+}
+.list li {
+  font-family: "Cafe24Ssurround";
+  font-size: 40px;
+  line-height: 90px;
+  list-style: none;
+  float: left;
+  width: 324px;
+  height: 80px;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 3px solid #1f3668;
+  border-radius: 20px 20px 0 0;
+}
+
+.list li.on {
+  background-color: #1f3668;
+  color: #fff;
+  font-weight: bold;
+}
+
+h1{
+  text-align: center;
+  line-height:200px;
+  font-family: 'Cafe24Ssurround';
+}
+
+ /*cont1 시작*/
+  #cont1 {
+    width:1320px;
+    height:1200px;
+    margin: 0 auto;
+    padding: 100px 0 100px;
+  }
+
+  .container{
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .containter:nth-child(4){
+    padding-left: 0;
+  }
+  
+  /*변경점*/
+  .container .card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: #ebe2ce;
+    border-radius: 20px;
+    overflow: hidden;
+    float:left;
+    border: solid 3px #ebe2ce;
+  }
+  
+  /*변경점*/
+  .container .card:before{
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 50;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    clip-path: circle(140px at 50% 35%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container .card:hover:before{
+    clip-path: circle(300px at 50% 0%);
+  }
+  
+  .container .card:after{
+    color: rgba(255,255,25,0.05)
+  }
+  
+  .container .card .imgBx{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 200px;
+  }
+  
+  .container .card:hover .imgBx img{
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+
+  .container .card:hover .imgBx img:nth-child(2){
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+  
+  .container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container .card:hover .contentBx{
+    height: 130px;
+    transition: 1s;
+  }
+  
+  /*변경점*/
+  .container .card .contentBx h2{
+    position: relative;
+    font-family: 'Cafe24Ssurround';
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #1f3769;
+    margin: 0;
+  }
+  
+  .container .card .contentBx .temp, .container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container .card:hover .contentBx .temp{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+
+  /*변경점*/
+  .container .card .contentBx .temp h3, .container .card .contentBx .color h3{
+    color: #1f3769;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  /*변경점*/
+  .container .card .contentBx a{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #1f3769;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+  /*cont1 끝*/
+  
+
+
+
+  /*cont2 시작*/
+  #cont2 {
+    width:1320px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 100px 0 100px;
+  }  
+  .container2{
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .containter2:nth-child(4){
+    padding-left: 0;
+  }
+  
+  /*변경점*/
+  .container2 .card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: #9a7d5d;
+    border-radius: 20px;
+    overflow: hidden;
+    float:left;
+    border: solid 3px #9a7d5d;
+  }
+  
+  .container2 .card:before{
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 50;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    clip-path: circle(140px at 50% 35%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container2 .card:hover:before{
+    clip-path: circle(300px at 50% 0%);
+  }
+  
+  .container2 .card:after{
+    color: rgba(255,255,25,0.05)
+  }
+  
+  .container2 .card .imgBx{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container2 .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container2 .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 200px;
+  }
+  
+  .container2 .card:hover .imgBx img{
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+
+  .container2 .card:hover .imgBx img:nth-child(2){
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+  
+  .container2 .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container2 .card:hover .contentBx{
+    height: 130px;
+    transition: 1s;
+  }
+
+   /*변경점*/
+  .container2 .card .contentBx h2{
+    position: relative;
+    font-family: 'Cafe24Ssurround';
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .container2 .card .contentBx .temp, .container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container2 .card:hover .contentBx .temp{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container2 .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+  
+   /*변경점*/
+  .container2 .card .contentBx .temp h3, .container .card .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  /*변경점*/
+  .container2 .card .contentBx a{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #9a7d5d;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+  }
+  
+  .container2 .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+  /*cont2 끝*/
+
+
+
+  /*cont3 시작*/
+  #cont3 {
+    width:1320px;
+    height:700px;
+    margin: 0 auto;
+    padding: 100px 0 100px;
+  }
+  .container3{
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .containter3:nth-child(4){
+    padding-left: 0;
+  }
+  
+  /*변경점*/
+  .container3 .card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: #9db9e1;
+    border-radius: 20px;
+    overflow: hidden;
+    float:left;
+    border: solid 3px #9db9e1;
+  }
+  
+  /*변경점*/
+  .container3 .card:before{
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 50;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    clip-path: circle(140px at 50% 35%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container3 .card:hover:before{
+    clip-path: circle(300px at 50% 0%);
+  }
+  
+  .container3 .card:after{
+    color: rgba(255,255,25,0.05)
+  }
+  
+  .container3 .card .imgBx{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container3 .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container3 .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 200px;
+  }
+  
+  .container3 .card:hover .imgBx img{
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+
+  .container3 .card:hover .imgBx img:nth-child(2){
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+  
+  .container3 .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container3 .card:hover .contentBx{
+    height: 130px;
+    transition: 1s;
+  }
+  
+  /*변경점*/
+  .container3 .card .contentBx h2{
+    position: relative;
+    font-family: 'Cafe24Ssurround';
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #1f3769;
+    margin: 0;
+  }
+  
+  .container3 .card .contentBx .temp, .container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container3 .card:hover .contentBx .temp{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container3 .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+
+  /*변경점*/
+  .container3 .card .contentBx .temp h3, .container .card .contentBx .color h3{
+    color: #1f3769;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  /*변경점*/
+  .container3 .card .contentBx a{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #1f3769;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+  }
+  
+  .container3 .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+  /*cont3 끝*/
+
+
+
+
+
+
+  /*cont4 시작*/
+   #cont4 {
+    width:1320px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 100px 0 300px;
+  }  
+  .container4{
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .containter2:nth-child(4){
+    padding-left: 0;
+  }
+  
+  /*변경점*/
+  .container4 .card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: #1f3668;
+    border-radius: 20px;
+    overflow: hidden;
+    float:left;
+    border: solid 3px #1f3668;
+  }
+  
+  .container4 .card:before{
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 50;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    clip-path: circle(140px at 50% 35%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container4 .card:hover:before{
+    clip-path: circle(300px at 50% 0%);
+  }
+  
+  .container4 .card:after{
+    color: rgba(255,255,25,0.05)
+  }
+  
+  .container4 .card .imgBx{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container4 .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container4 .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 200px;
+  }
+  
+  .container4 .card:hover .imgBx img{
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+
+  .container4 .card:hover .imgBx img:nth-child(2){
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -40%);
+  }
+  
+  .container4 .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container4 .card:hover .contentBx{
+    height: 130px;
+    transition: 1s;
+  }
+
+   /*변경점*/
+  .container4 .card .contentBx h2{
+    position: relative;
+    font-family: 'Cafe24Ssurround';
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .container4 .card .contentBx .temp, .container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container4 .card:hover .contentBx .temp{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container4 .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+  
+   /*변경점*/
+  .container4 .card .contentBx .temp h3, .container .card .contentBx .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  /*변경점*/
+  .container4 .card .contentBx a{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #1f3668;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+  }
+  
+  .container4 .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+  /*cont4 끝*/
+
+
+
+
+
+  /*footer*/
+#footer{
+  padding-top:30px;
+  background-color: #1f3668;
+  color:#fff;
+  font-family: 'S-CoreDream-2ExtraLight';
+  text-align: center;
+}
+#footer p{
+  font-size: 20px;
+}
+.f_link{
+  font-size: 30px;
+  padding-top: 10px;
+}
+.f_link a{
+  font-size: 30px;
+  color: #fff;
+}
